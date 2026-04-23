@@ -157,6 +157,12 @@ public class DynamicArray_Shell{
         count--;
         return removedObject;
     }
+    /**
+     * Remove the spicial element from the list;
+     * @param object the element to be removed
+     * @return true if its found and removed, if not then false
+     * @throws IllegalArgumentException if object is null
+     */
     public boolean remove(String object){
         if(object ==null){
             throw new IllegalArgumentException("Object cannot be null");
@@ -167,5 +173,12 @@ public class DynamicArray_Shell{
         }
         remove(position);
         return true;
+    }
+    /**
+     * removed all element using new list and keep current capacity
+     */
+    public void clear(){
+        data = new String[data.length];
+        count = 0;
     }
 }
