@@ -75,4 +75,15 @@ public class DynamicArray_Shell{
         return indexOf(target)!=-1;
 
     }
+    /**
+     * Ensure that array has enough capacity;
+     */
+    public void ensureCapacity(){
+        if(count == data.length){
+            String  [] newData = new String[data.length*expand];
+            System.arraycopy(data,0,newData,0,count);
+        data = newData;
+        }
+    }
+    
 }
