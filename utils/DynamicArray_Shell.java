@@ -48,4 +48,21 @@ public class DynamicArray_Shell{
         }
         return data [position];
     }
+    /**
+     * Returns the index of the first element (ignore case different)
+     * @param target the element to search 
+     * @return the index of first matching elements or -1 if not founded;
+     * @throws IllegalArgumentException if the target is null.
+     */
+    public int indexOf(String target){
+        if(target == null){
+            throw new IllegalArgumentException("Target cannot be null!");
+        }
+        for(int i=0;i<count;i++){
+            if(data[i].equalsIgnoreCase(target)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
