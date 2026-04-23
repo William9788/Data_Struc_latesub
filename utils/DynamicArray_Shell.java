@@ -85,5 +85,17 @@ public class DynamicArray_Shell{
         data = newData;
         }
     }
-    
+    /**
+     * add the object at the end of  the list;
+     * @param object to be added into the list
+     * @throws IllegalArgumentException if object is null;
+     */
+    public void add(String object){
+    if(object ==null){
+        throw new IllegalArgumentException("Object can not be null!");
+    }
+    ensureCapacity();
+    data[count] = object;
+    count++;
+    }
 }
