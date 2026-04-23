@@ -157,4 +157,15 @@ public class DynamicArray_Shell{
         count--;
         return removedObject;
     }
+    public boolean remove(String object){
+        if(object ==null){
+            throw new IllegalArgumentException("Object cannot be null");
+        }
+        int position = indexOf(object);
+        if(position ==-1){
+            return false;
+        }
+        remove(position);
+        return true;
+    }
 }
