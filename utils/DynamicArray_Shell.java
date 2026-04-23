@@ -37,5 +37,15 @@ public class DynamicArray_Shell{
     public boolean isEmpty(){
         return count ==0;
     }
-    
+    /**
+     * @param position the index to access;
+     * @return the String stored in the specified position;
+     * @throws IndexOutOfBoundsException if position is less or equal or greater than the current size;
+     */
+    public  String get(int position){
+        if(position <0||position>=count){
+            throw new IndexOutOfBoundsException("Invalid position: "+ position);
+        }
+        return data [position];
+    }
 }
