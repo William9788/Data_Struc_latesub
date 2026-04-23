@@ -98,4 +98,25 @@ public class DynamicArray_Shell{
     data[count] = object;
     count++;
     }
+    /**
+     * insert the element at special position in the list shift the exist element
+     * @param object the element to insert
+     * @param position the index by insert
+     * @throws IllegalArgumentException if object is null
+     * @throws IndexOutOfBoundsException if position is less or greater than the current size
+     */
+    public void add(String object, int position){
+        if(object == null){
+            throw new IllegalArgumentException("Object can not be null");
+        }
+        if(position <0||position>count){
+            throw new IndexOutOfBoundsException("Invalid position: "+position);
+        }
+        ensureCapacity();
+        for(int i = count;i>position;i--){
+            data[i] = data[i-1];
+        }
+        data[position] = object;
+        count++;
+    }
 }
