@@ -119,4 +119,24 @@ public class DynamicArray_Shell{
         data[position] = object;
         count++;
     }
+    /**
+     * Replace the element at the specified position.
+     * @param object the element to be insert
+     * @param position the index of element to replace
+     * @return the element who stored before
+     * @throws IllegalArgumentException if object is null;
+     * @throws IndexOutOfBoundsException if position is less or greater than the current size
+     */
+    public String set(String object,int position){
+        if(object ==null){
+            throw new IllegalArgumentException("Object cannot be null");
+
+        }
+        if(position <0||position>=count){
+            throw new IndexOutOfBoundsException("Invalid position: "+position);
+        }
+        String value = data[position];
+        data[position] = object;
+        return value;
+    }
 }
