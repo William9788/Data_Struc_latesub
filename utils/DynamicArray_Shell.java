@@ -12,8 +12,9 @@ public class DynamicArray_Shell{
         count= 0 ;
     }
     /**
-     * Construct an empty Dyna
-     * @param size
+     * Construct an empty Dynamic list and initial capacity;
+     * @param size initial capicity of the internal array
+     * @throws IllegalArgumentException if size is less or equal to 0;
      */
     public DynamicArray_Shell(int size){
         if(size <=0){
@@ -22,10 +23,19 @@ public class DynamicArray_Shell{
         data = new String[size];
         count = 0;
     }
+    /**
+     * Returns how many elements it has in the list;
+     * @return size of the list;
+     */
     public int countSize(){
         return count;
     }
+        /**
+     * Return true if list is empty;
+     * @return true if list has no element ,otherwise its false;
+     */
     public boolean isEmpty(){
         return count ==0;
-    } 
+    }
+    
 }
