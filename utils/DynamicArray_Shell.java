@@ -139,4 +139,22 @@ public class DynamicArray_Shell{
         data[position] = object;
         return value;
     }
+    /**
+     * Removed and return the element
+     * @param position the index of element to be removed
+     * @return the removed element
+     * @throws IndexOutOfBoundsException if position is less or greater than the current size
+     */
+    public String remove(int position){
+        if(position <0||position>=count){
+            throw new IndexOutOfBoundsException("Invalid position: "+position);
+        }
+        String removedObject = data[position];
+        for(int i=0;i<count-1;i++){
+            data[i] = data[i+1];
+        }
+        data[count-1]= null;
+        count--;
+        return removedObject;
+    }
 }
