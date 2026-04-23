@@ -65,4 +65,14 @@ public class DynamicArray_Shell{
         }
         return -1;
     }
+    /**
+     * check if the element exist in the list
+     * @param target the target to search;
+     * @return true if is found,or false if not found;
+     * @throws IllegalArgumentException if target is null;
+     */
+    public boolean contains(String target){
+        return indexOf(target)!=-1;
+
+    }
 }
