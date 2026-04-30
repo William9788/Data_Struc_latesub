@@ -181,6 +181,12 @@ public class DynamicArray_Shell{
         data = new String[data.length];
         count = 0;
     }
+    /**
+     * 
+     * @param target element to search for
+     * @return the last index of the element , or return -1 if not found;
+     * @throws IllegalArgumentException if target is null;
+     */
     public int lastIndexOf(String target){
         if(target==null){
             throw new IllegalArgumentException("Target could not be null!");
@@ -192,4 +198,5 @@ public class DynamicArray_Shell{
         }
         return -1;
     }
+
 }
