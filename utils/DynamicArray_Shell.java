@@ -181,4 +181,15 @@ public class DynamicArray_Shell{
         data = new String[data.length];
         count = 0;
     }
+    public int lastIndexOf(String target){
+        if(target==null){
+            throw new IllegalArgumentException("Target could not be null!");
+        }
+        for(int i=count-1;i>=0;i--){
+            if(data[i].equalsIgnoreCase(target)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
